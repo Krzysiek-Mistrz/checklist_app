@@ -38,5 +38,5 @@ Sometimes there's problem between snap & core packages, then you need to type:
 `LD_PRELOAD="/lib/x86_64-linux-gnu/libpthread.so.0" ./ToDoListApp`  
 To omit the error.
 
-> **NOTE**
+> **NOTE**  
 > *This project was created usin qt5 cause it's just much simpler to properly install&configure than qt6, cheers ;)*

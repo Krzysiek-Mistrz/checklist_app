@@ -23,7 +23,7 @@ private:
     QLineEdit *taskInput;
     QPushButton *addButton;
     QPushButton *removeButton;
-    QPushButton *markDoneButton;
+    QPushButton *doneButton;
 };
 
 #endif

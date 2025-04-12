@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     removeButton = new QPushButton("Remove Task", this);
     doneButton = new QPushButton("Mark as Done", this);
     btnLayout->addWidget(removeButton);
-    btnLayout->addWidget(doneButton)
+    btnLayout->addWidget(doneButton);
 
-    mainWindow->addLayout(inputLayout);
+    mainLayout->addLayout(inputLayout);
     mainLayout->addWidget(taskList);
     mainLayout->addLayout(btnLayout);
 

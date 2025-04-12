@@ -3,6 +3,16 @@
 #include <QMessageBox>
 #include <QFont>
 
+/**
+ * @brief Constructs a new MainWindow widget.
+ *
+ * Creates a window with a text input field at the top, a list of tasks in the
+ * middle, and three buttons at the bottom: "Add Task", "Remove Task", and
+ * "Mark as Done". The buttons are connected to the addTask, removeTask, and
+ * markTaskDone slots, respectively.
+ *
+ * @param parent The parent of the widget.
+ */
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     QWidget *centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
@@ -31,6 +41,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     connect(doneButton, &QPushButton::clicked, this, &MainWindow::markTaskDone);
 }
 
+/**
+ * @brief Adds a new task to the task list.
+ *
+ * Retrieves the text from the task input field and adds it as a new
+ * item in the task list. If the input field is empty, a warning message
+ * is displayed prompting the user to enter a task. After a task is added,
+ * the input field is cleared.
+ */
 void MainWindow::addTask() {
     QString taskText = taskInput->text();
     if (taskText.isEmpty()) {
@@ -42,6 +60,13 @@ void MainWindow::addTask() {
     taskInput->clear();
 }
 
+/**
+ * @brief Removes the currently selected task from the task list.
+ *
+ * Checks if a task is selected in the task list. If no task is selected,
+ * an information message is displayed to prompt the user to select a task.
+ * If a task is selected, it is removed from the task list.
+ */
 void MainWindow::removeTask() {
     QListWidgetItem *item = taskList->currentItem();
     if (!item) {
@@ -51,6 +76,13 @@ void MainWindow::removeTask() {
     delete taskList->takeItem(taskList->row(item));
 }
 
+/**
+ * @brief Strikes out the currently selected task in the task list.
+ *
+ * Checks if a task is selected in the task list. If no task is selected,
+ * an information message is displayed to prompt the user to select a task.
+ * If a task is selected, it is marked as done by striking out the text.
+ */
 void MainWindow::markTaskDone() {
     QListWidgetItem *item = taskList->currentItem();
     if (!item) {

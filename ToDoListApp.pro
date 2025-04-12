@@ -3,7 +3,9 @@ QT += widgets
 TARGET = ToDoListApp
 TEMPLATE = app
 
-SOURCES +=  main.cpp \ 
-            main_window.cpp
+SOURCES +=  src/main.cpp \ 
+            src/main_window.cpp
 
-HEADERS += main_window.h
+HEADERS += include/main_window.hpp
+
+INCLUDEPATH += $$PWD/include

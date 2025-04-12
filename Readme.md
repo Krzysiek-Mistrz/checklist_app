@@ -3,10 +3,15 @@ A Qt-based OOP to-do list application. The project includes a simple GUI that al
 
 ## Project Structure
 ToDoListApp/  
-├── main.cpp  
-├── mainwindow.h  
-├── mainwindow.cpp  
-└── ToDoListApp.pro  
+├── src/  
+│   ├── main.cpp  
+│   ├── main_window.cpp   
+├── include/  
+│   ├── main_window.h  
+├── resources/  
+│   └── style.qss  
+├── ToDoListApp.pro  
+└── build/   
 
 ## Files summary
 1) In the ToDoListApp.pro file we define the project
@@ -15,7 +20,8 @@ ToDoListApp/
 4) in the mainwindow.cpp file we implement the interface logic. In the methods we implement:  
     addTask() – adding a task from the text entered in QLineEdit;
     removeTask() – removing the currently selected task;
-    markTaskDone() – changing the task font to crossed out, which visually indicates its completion.
+    markTaskDone() – changing the task font to crossed out, which visually indicates its completion.  
+5) in style.qss there are simply some style for app  
 
 ## How to
 1) cd into project directory (checklist_app)  

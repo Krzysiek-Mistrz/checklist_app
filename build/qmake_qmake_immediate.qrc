@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="resources/style.qss">/home/krzychu/Documents/Programowanie/projekty/checklist_app/resources/style.qss</file>
+</qresource>
+</RCC>

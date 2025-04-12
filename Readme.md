@@ -9,9 +9,10 @@ ToDoListApp/
 ├── include/  
 │   ├── main_window.h  
 ├── resources/  
-│   └── style.qss  
+│   ├── style.qss  
+│   └── resources.qrc   
 ├── ToDoListApp.pro  
-└── build/   
+└── build/  
 
 ## Files summary
 1) In the ToDoListApp.pro file we define the project
@@ -22,6 +23,7 @@ ToDoListApp/
     removeTask() – removing the currently selected task;
     markTaskDone() – changing the task font to crossed out, which visually indicates its completion.  
 5) in style.qss there are simply some style for app  
+6) in resources.qrc we define structure of included resources  
 
 ## How to
 1) cd into project directory (checklist_app)  

@@ -9,3 +9,5 @@ SOURCES +=  src/main.cpp \
 HEADERS += include/main_window.hpp
 
 INCLUDEPATH += $$PWD/include
+
+RESOURCES += resources/resources.qrc

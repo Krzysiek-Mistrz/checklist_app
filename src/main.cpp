@@ -15,11 +15,13 @@
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
-    QFile file("style.qss");
+    QFile file(":/style.qss");
     if (file.open(QFile::ReadOnly)) {
         QString styleSheet = QLatin1String(file.readAll());
         app.setStyleSheet(styleSheet);
         file.close();
+    } else {
+        qWarning("Nie udało się otworzyć pliku stylów");
     }
 
     MainWindow window;

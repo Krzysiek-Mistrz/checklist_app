@@ -26,9 +26,9 @@ ToDoListApp/
 6) in resources.qrc we define structure of included resources  
 
 ## How to
-1) cd into project directory (checklist_app)  
+1) cd into project build directory (of checklist_app) (i.e. `cd ./checklist_app/build`)  
 2) type:  
-`qmake ToDoListApp.pro`  
+`qmake ../ToDoListApp.pro`  
 `make`  
 3) now new ToDoListApp should be created to open the app just type:  
 `./ToDoListApp`  
@@ -37,3 +37,6 @@ ToDoListApp/
 Sometimes there's problem between snap & core packages, then you need to type:  
 `LD_PRELOAD="/lib/x86_64-linux-gnu/libpthread.so.0" ./ToDoListApp`  
 To omit the error.
+
+> **NOTE**
+> *This project was created usin qt5 cause it's just much simpler to properly install&configure than qt6, cheers ;)*
